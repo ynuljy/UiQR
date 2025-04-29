@@ -6,7 +6,11 @@ In order to run the code, first download data.zip and pretrained_model.zip from 
 Change to directory ./UiQR/data/. 
 
 Following is an example command to embed KG by running the training code
+```
 python .\kge\main.py
+```
 
 Following is an example command to run the training code of UiQR
+```
 python main.py
+```
