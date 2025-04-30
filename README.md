@@ -3,7 +3,7 @@
 Our datasets are derived from [EmbedKGQA](https://github.com/malllabiisc/EmbedKGQA)
 
 ## Data and pre-trained models
-In order to run the code, first download UGD datasets from [here](https://drive.google.com/drive/folders/1Iqj9I3RMr-8vQtqSXsDp6-GNcT3UiHP-?dmr=1&ec=wgc-drive-globalnav-goto).
+In order to run the code, first download UGD datasets from [here](https://drive.google.com/drive/folders/1Iqj9I3RMr-8vQtqSXsDp6-GNcT3UiHP-?dmr=1&ec=wgc-drive-globalnav-goto). UGD contains the entity co-occurrence frequency that we have processed and the KG multi-hop paths for query reasoning.
 
 The resulting file structure will look like:
 
@@ -36,8 +36,6 @@ Following is an example command to run the training code of UiQR
 ```
 python main.py
 ```
-### UGD Dataset
-UGD contains the entity co-occurrence frequency that we have processed and the KG multi-hop paths for query reasoning.
 
 
 ## SimpleQA
