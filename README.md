@@ -15,6 +15,8 @@ The resulting file structure will look like:
     ├── metaQA/                 (prerocessed ConceptNet)
     ├── WQSP/
         ├── catch
+            ├── KG_full
+            ├── KG_half
         ├── KG_full
         ├── KG_half
         ├── pretrained_models             (converted statements)
