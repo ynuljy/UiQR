@@ -37,13 +37,6 @@ Following is an example command to run the training code of UiQR
 python main.py
 ```
 
-
-## SimpleQA
-
-### KG dataset
-
-Same as the original WQSP KG dataset.
-
 ## Acknowledgement
 This repo is built upon the EmbedKGQA and prefnet:
 ```
