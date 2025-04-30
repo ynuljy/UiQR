@@ -1,7 +1,9 @@
 # Instructions
 
+Our dataset is derived from [EmbedKGQA](https://github.com/malllabiisc/EmbedKGQA)
+
 ## Data and pre-trained models
-In order to run the code, first download data and pretrained_model from [here](https://drive.google.com/drive/folders/1Iqj9I3RMr-8vQtqSXsDp6-GNcT3UiHP-?dmr=1&ec=wgc-drive-globalnav-goto). Unzip these files in the main directory.
+In order to run the code, first download UGD data from [here](https://drive.google.com/drive/folders/1Iqj9I3RMr-8vQtqSXsDp6-GNcT3UiHP-?dmr=1&ec=wgc-drive-globalnav-goto). Unzip these files in the main directory.
 
 The resulting file structure will look like:
 
@@ -43,3 +45,9 @@ UGD contains the entity co-occurrence frequency that we have processed and the K
 ### KG dataset
 
 Same as the original WQSP KG dataset.
+
+## Acknowledgement
+This repo is built upon the EmbedKGQA and prefnet:
+```
+https://github.com/malllabiisc/EmbedKGQA
+https://github.com/lihuiliullh/PrefNet
