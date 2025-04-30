@@ -1,6 +1,6 @@
 # Instructions
 
-Our dataset is derived from [EmbedKGQA](https://github.com/malllabiisc/EmbedKGQA)
+Our datasets are derived from [EmbedKGQA](https://github.com/malllabiisc/EmbedKGQA)
 
 ## Data and pre-trained models
 In order to run the code, first download UGD data from [here](https://drive.google.com/drive/folders/1Iqj9I3RMr-8vQtqSXsDp6-GNcT3UiHP-?dmr=1&ec=wgc-drive-globalnav-goto). Unzip these files in the main directory.
