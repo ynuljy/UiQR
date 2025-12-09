@@ -165,28 +165,25 @@ def find_triple_keys(dict_obj, h_value, t_value):
     return None
 
 def getVectors(embedding_file):
-    # 得到当前query的Numpy向量和行编号列表
     with open(embedding_file, 'r', encoding='utf-8') as embf:
-        # 记录行数
+        
         i = 0
-        # 保存行编号
+        
         line_num = {}
         for line in embf.readlines():
             i += 1
-            # 字符串转列表
+            
             line = line.strip('\n').split(',')
             if i == 1:
-                # 读取行数和列数，初始化多维数组
                 row = int(line[0])
                 column = int(line[1])
                 matrix = np.zeros((row, column), dtype=float)
             else:
-                # 记录行编号，即每行第一个数
+                
                 line_num[str(line[0])] = i - 2
                 for j in range(0, 64):
-                    # 注意i(行数)和j(列数)的取值，从0开始，但是第1行不是向量，第1列也不是向量
                     matrix[i - 2][j] = line[j + 1]
-        # 返回行编号和多维数组
+        
         return (line_num, matrix)
 
 
