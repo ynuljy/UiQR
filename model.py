@@ -93,8 +93,8 @@ class RelationExtractor(nn.Module):
         head = self.ent_dropout(head.to(self.device))
         tail = self.ent_dropout(tail.to(self.device))
 
-        re_head, im_head = torch.chunk(head, 2, dim=-1)  # 分割头实体为实部和虚部
-        re_tail, im_tail = torch.chunk(tail, 2, dim=-1)  # 分割尾实体为实部和虚部
+        re_head, im_head = torch.chunk(head, 2, dim=-1)  
+        re_tail, im_tail = torch.chunk(tail, 2, dim=-1)  
 
         scores = []
         weights = self.re_em_matrix.weight
@@ -102,8 +102,8 @@ class RelationExtractor(nn.Module):
             re_emb = weights[i]
             re_relation, im_relation = torch.chunk(re_emb, 2, dim=-1)
 
-            re_score = re_head * re_relation - im_head * im_relation  # 实部得分
-            im_score = re_head * im_relation + im_head * re_relation  # 虚部得分
+            re_score = re_head * re_relation - im_head * im_relation  
+            im_score = re_head * im_relation + im_head * re_relation  
 
             final_score = torch.mm(re_score.unsqueeze(0), re_tail.unsqueeze(1)) + torch.mm(im_score.unsqueeze(0),
                                                                                            im_tail.unsqueeze(1))
