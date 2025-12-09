@@ -92,7 +92,6 @@ parser.add_argument("--load_from", type=str, default="")
 # --candidate size
 parser.add_argument("--can_size", type=int, default="10")
 
-# 解析传入的参数
 args = parser.parse_args()
 
 
