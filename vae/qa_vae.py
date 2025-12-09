@@ -48,7 +48,7 @@ class Qa_VAE(nn.Module):
         emb_set = torch.relu(emb_set)
         if emb_set.shape[-1] < self.en_dim:
             padding_size = self.en_dim - emb_set.shape[-1]
-            padded_input = F.pad(emb_set, (0, padding_size))  # 填充到固定长度
+            padded_input = F.pad(emb_set, (0, padding_size))  
             lstm_out, (h_n, c_n) = self.lstm(padded_input.unsqueeze(1))  # [batch_size, 1, new_emb_dim]
         else:
             lstm_out, (h_n, c_n) = self.lstm(emb_set.unsqueeze(1))  # [batch_size, 1, new_emb_dim]
